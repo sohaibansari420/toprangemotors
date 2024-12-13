@@ -43,14 +43,14 @@
                                     <label class="form-check-label" for="customCheck1">Remember Me</label>
                                  </div>
                               </div>
-                              <div class="col-lg-6">
+                              {{-- <div class="col-lg-6">
                                  <a href="{{route('auth.recoverpw')}}"  class="float-end">Forgot Password?</a>
-                              </div>
+                              </div> --}}
                            </div>
                            <div class="d-flex justify-content-center">
                               <button type="submit" class="btn btn-primary">{{ __('Sign In') }}</button>
                            </div>
-                           <p class="text-center my-3">or sign in with other accounts?</p>
+                           {{-- <p class="text-center my-3">or sign in with other accounts?</p>
                            <div class="d-flex justify-content-center">
                               <ul class="list-group list-group-horizontal list-group-flush">
                                  <li class="list-group-item border-0 pb-0">
@@ -69,13 +69,13 @@
                            </div>
                            <p class="mt-3 text-center">
                               Don’t have an account? <a href="{{route('auth.signup')}}" class="text-underline">Click here to sign up.</a>
-                           </p>
+                           </p> --}}
                         </form>
                      </div>
                   </div>
                </div>
             </div>
-            <div class="sign-bg">
+            {{-- <div class="sign-bg">
                <svg width="280" height="230" viewBox="0 0 431 398" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g opacity="0.05">
                   <rect x="-157.085" y="193.773" width="543" height="77.5714" rx="38.7857" transform="rotate(-45 -157.085 193.773)" fill="#3B8AFF"/>
@@ -84,7 +84,7 @@
                   <rect x="62.3154" y="-190.173" width="543" height="77.5714" rx="38.7857" transform="rotate(45 62.3154 -190.173)" fill="#3B8AFF"/>
                   </g>
                </svg>
-            </div>
+            </div> --}}
          </div>
          <div class="col-md-6 d-md-block d-none bg-primary p-0 mt-n1 vh-100 overflow-hidden">
             <img src="{{asset('images/auth/01.png')}}" class="img-fluid gradient-main animated-scaleX" alt="images">
