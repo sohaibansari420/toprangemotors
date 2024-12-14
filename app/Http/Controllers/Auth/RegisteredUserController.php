@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\models\Admin;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -39,14 +40,12 @@ class RegisteredUserController extends Controller
             'password' => 'required|string|confirmed|min:8',
         ]);
 
-        Auth::login($user = User::create([
-            'username' => strtolower($request->first_name).strtolower($request->last_name),
-            'first_name' => $request->first_name,
-            'last_name' => $request->last_name,
-            'phone_number' => $request->phone_number,
+        Auth::login($user = Admin::create([
+            'name' => strtolower($request->first_name).strtolower($request->last_name),
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'user_type' => 'user'
+            'phone_number' => $request->phone_number,
+            'type' => 'super_user',
         ]));
 
         $user->assignRole('user');
