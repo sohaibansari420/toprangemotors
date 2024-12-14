@@ -48,7 +48,7 @@ class RegisteredUserController extends Controller
             'type' => 'super_user',
         ]));
 
-        $user->assignRole('user');
+        // $user->assignRole('user');
 
         event(new Registered($user));
 
