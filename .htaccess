@@ -1,0 +1,35 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+    
+    
+    RewriteBase /
+RewriteCond %{HTTP_HOST} ^OLDDOMAIN\.com$ [NC]
+RewriteRule ^(.*)$ http://NEWDOMAIN.com [R=301,L]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller.. 
+    RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+  RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^pcocar\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.pcocar\.com$
+RewriteRule ^/?$ "https\:\/\/www\.pcocar\.com\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^fleetrunway\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.fleetrunway\.com$
+RewriteRule ^login$ "http\:\/\/fleetrunway\/login" [R=301,L]

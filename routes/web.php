@@ -28,7 +28,7 @@ Route::get('/storage', function () {
 });
 
 //UI Pages Routs
-Route::get('/', [HomeController::class, 'uisheet'])->name('uisheet');
+// Route::get('/', [HomeController::class, 'uisheet'])->name('uisheet');
 
 Route::group(['middleware' => 'auth'], function () {
     // Permission Module
