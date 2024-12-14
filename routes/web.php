@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Artisan;
 // Packages
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\VehicleController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -119,3 +121,8 @@ Route::group(['prefix' => 'icons'], function() {
 //Extra Page Routs
 Route::get('privacy-policy', [HomeController::class, 'privacypolicy'])->name('pages.privacy-policy');
 Route::get('terms-of-use', [HomeController::class, 'termsofuse'])->name('pages.term-of-use');
+
+
+// ------------------------------Start the project---------------------------
+
+Route::get('/vehicle-list',[VehicleController::class , 'list'])->name('vehicleList');
