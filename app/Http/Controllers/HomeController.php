@@ -13,7 +13,7 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $assets = ['chart', 'animation'];
-        $vehicles = Vehicle::where('is_active','yes')->get(10);
+        $vehicles = Vehicle::where('is_active','yes')->take(5)->get();
         $data = [
             'vehicles' => $vehicles,
         ];
