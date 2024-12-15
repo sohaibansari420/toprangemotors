@@ -12,6 +12,6 @@ class VehicleController extends Controller
         $data = [
             'vehicles' => $vehicle,
         ];
-        return view('Fleet.Vehicle.list');
+        return view('Fleet.Vehicle.list')->with('data');
     }
 }
