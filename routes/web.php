@@ -125,4 +125,7 @@ Route::get('terms-of-use', [HomeController::class, 'termsofuse'])->name('pages.t
 
 // ------------------------------Start the project---------------------------
 
-Route::get('/vehicle-list',[VehicleController::class , 'list'])->name('vehicleList');
+Route::group(['middleware' => 'auth'], function () {
+    // Vehicle
+    Route::get('/vehicle-list',[VehicleController::class , 'list'])->name('vehicleList');
+});

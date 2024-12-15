@@ -12,23 +12,37 @@
                    <table id="datatable" class="table table-striped" data-toggle="data-table">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
+                                <th>Vehicle Details</th>
+                                <th>Type</th>
+                                <th>Price</th>
+                                <th>City</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011/04/25</td>
-                                <td>$320,800</td>
-                            </tr>
+                            @foreach ($vehicles as $vehicle)
+                                <tr>
+                                    <td>
+                                        {{ $vehicle->licence_plate_number }},
+                                        {{ @$vehicle->car_make->name }},
+                                        {{ @$vehicle->car_model->name }},
+                                        {{ $vehicle->year }},
+                                        {{$vehicle->colour}}
+                                    </td>
+                                    <td>
+                                        @if ($vehicle->fuel_type == 0)
+                                            petrol
+                                        @elseif ($vehicle->fuel_type == 4)
+                                            Hybrid
+                                        @elseif ($vehicle->fuel_type == 3)
+                                            Electric
+                                        @else
+                                            Electric Hybrid
+                                        @endif
+                                    </td>
+                                    <td>£{{ $vehicle->price }}</td>
+                                    <td>{{$vehicle->city}}</td>
+                                </tr>
+                            @endforeach
                         </tbody>
                    </table>
                 </div>
