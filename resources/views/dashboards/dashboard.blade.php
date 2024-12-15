@@ -259,44 +259,36 @@
                         <table id="basic-table" class="table table-striped mb-0" role="grid">
                            <thead>
                               <tr>
-                                 <th>Name</th>
-                                 <th>Position</th>
-                                 <th>Office</th>
-                                 <th>Age</th>
+                                 <th>Vehicle Detail</th>
+                                 <th>City</th>
+                                 <th>Price</th>
                               </tr>
                            </thead>
                            <tbody>
-                              <tr>
-                                 <td>
-                                    <div class="d-flex align-items-center">
-                                       {{-- <img class="bg-soft-primary rounded img-fluid avatar-40 me-3" src="{{asset('images/shapes/01.png')}}" alt="profile"> --}}
-                                       <h6>Tiger Nixon</h6>
-                                    </div>
-                                 </td>
-                                 <td>
-                                    {{-- <div class="iq-media-group iq-media-group-1">
-                                       <a href="#" class="iq-media-1">
-                                          <div class="icon iq-icon-box-3 rounded-pill">SP</div>
-                                       </a>
-                                       <a href="#" class="iq-media-1">
-                                          <div class="icon iq-icon-box-3 rounded-pill">PP</div>
-                                       </a>
-                                       <a href="#" class="iq-media-1">
-                                          <div class="icon iq-icon-box-3 rounded-pill">MM</div>
-                                       </a>
-                                    </div> --}}
-                                    System Architect
-                                 </td>
-                                 <td>Edinburgh</td>
-                                 <td>
-                                    <div class="d-flex align-items-center mb-2">
-                                       <h6>60%</h6>
-                                    </div>
-                                    <div class="progress bg-soft-primary shadow-none w-100" style="height: 4px">
-                                       <div class="progress-bar bg-primary" data-toggle="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                 </td>
-                              </tr>
+                              @foreach ($vehicles as $vehicle)
+                                 <tr>
+                                    <td>
+                                       <div class="d-flex align-items-center">
+                                          {{-- <img class="bg-soft-primary rounded img-fluid avatar-40 me-3" src="{{asset('images/shapes/01.png')}}" alt="profile"> --}}
+                                          {{ $vehicle->licence_plate_number }},
+                                          {{ @$vehicle->car_make->name }},
+                                          {{ @$vehicle->car_model->name }},
+                                          {{ $vehicle->year }},
+                                          {{$vehicle->colour}}
+                                       </div>
+                                    </td>
+                                    <td>{{$vehicle->city}}</td>
+                                    <td>£{{ $vehicle->price }}</td>
+                                    {{-- <td>
+                                       <div class="d-flex align-items-center mb-2">
+                                          <h6>60%</h6>
+                                       </div>
+                                       <div class="progress bg-soft-primary shadow-none w-100" style="height: 4px">
+                                          <div class="progress-bar bg-primary" data-toggle="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                       </div>
+                                    </td> --}}
+                                 </tr>
+                              @endforeach
                            </tbody>
                         </table>
                      </div>

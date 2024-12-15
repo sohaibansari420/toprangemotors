@@ -66,43 +66,43 @@ class Vehicle extends Model
 
   public function partners()
     {
-        return $this->belongsTo('App\models\Partner','partner_id', 'id');
+        return $this->belongsTo('App\Models\Partner','partner_id', 'id');
     }
      public function car_model()
     {
-        return $this->belongsTo('App\models\CarModel','model', 'id');
+        return $this->belongsTo('App\Models\CarModel','model', 'id');
     }
 
     public function car_make()
     {
-        //return $this->hasMany('App\models\Make');
-        return $this->belongsTo('App\models\Make','make','id');
+        //return $this->hasMany('App\Models\Make');
+        return $this->belongsTo('App\Models\Make','make','id');
     }
      public function car_purchase()
     {
-        return $this->belongsTo('App\models\Purchase','purchase','id');
+        return $this->belongsTo('App\Models\Purchase','purchase','id');
     }
 
     public function accident()
     {
-        return $this->belongsTo('App\models\Accedental_records','vehicle_id','id');
+        return $this->belongsTo('App\Models\Accedental_records','vehicle_id','id');
     }
 
     public function status()
     {
-        return $this->hasOne('App\models\VehicleStatus','vehicle_id','id');
+        return $this->hasOne('App\Models\VehicleStatus','vehicle_id','id');
     }
 
     public function insurance()
     {
-        return $this->hasOne('App\models\InsuranceCompany','vehicle_id','id')->where('int_status',1);
+        return $this->hasOne('App\Models\InsuranceCompany','vehicle_id','id')->where('int_status',1);
     }
 
 
     public function vehicle_images()
     {
-        return $this->hasMany('App\models\VehicleImage');
-        //return $this->belongsTo('App\models\Make','make','id');
+        return $this->hasMany('App\Models\VehicleImage');
+        //return $this->belongsTo('App\Models\Make','make','id');
     }
 
     public function bookings(){
@@ -111,6 +111,6 @@ class Vehicle extends Model
 
     public function invoice()
     {
-        return $this->hasMany('App\models\Invoice', 'vehicle_id', 'id');
+        return $this->hasMany('App\Models\Invoice', 'vehicle_id', 'id');
     }
 }

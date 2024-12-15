@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Vehicle;
 
 class HomeController extends Controller
 {
@@ -12,7 +13,11 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $assets = ['chart', 'animation'];
-        return view('dashboards.dashboard', compact('assets'));
+        $vehicles = Vehicle::where('is_active','yes')->get(10);
+        $data = [
+            'vehicles' => $vehicles,
+        ];
+        return view('dashboards.dashboard', compact('assets'))->with($data);
     }
 
     /*
