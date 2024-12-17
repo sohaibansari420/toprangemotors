@@ -76,6 +76,7 @@
                   {{-- <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li> --}}
                   {{-- <li><a href="#blog-section" class="nav-link">Blog</a></li> --}}
                   <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                  <li><a href="{{ route('login') }}" class="nav-link">Sign In</a></li>
                 </ul>
               </nav>
             </div>

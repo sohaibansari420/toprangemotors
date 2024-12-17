@@ -11,7 +11,7 @@ class VehicleController extends Controller
         $vehicle = Vehicle::where('is_active','yes')->get();
         $data = [
             'vehicles' => $vehicle,
-        ];
+        ]; 
         return view('Fleet.Vehicle.list')->with('data');
     }
 }
