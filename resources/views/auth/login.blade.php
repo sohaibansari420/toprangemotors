@@ -88,7 +88,7 @@
          </div>
          <div class="col-md-6 d-md-block d-none bg-primary p-0 mt-n1 vh-100 overflow-hidden">
             <img src="{{asset('images/auth/01.png')}}" class="img-fluid gradient-main animated-scaleX" alt="images">
-            <div class="position-absolute top-50 translate-middle" 
+            {{-- <div class="position-absolute top-50 translate-middle" 
                style="left: 75%; background-color: rgba(255, 255, 255, 0.8); border-radius: 10px; z-index: 2; transform: translateY(-50%); background:center;">
                <ul class="m-2 text-dark" style="color: white !important; font-size: large; font-family: 'Arial', sans-serif; list-style-type: disc;">
                   <li><strong>Fleet Management System</strong> is a comprehensive solution designed to streamline and optimize the operations of vehicle fleets across various industries.</li>
@@ -97,7 +97,7 @@
                   <li>Whether for transportation or logistics, this platform ensures improved productivity, reduced operational costs, and enhanced compliance with regulations.</li>
                   <li>Ideal for businesses of all sizes, a <strong>Fleet Management System</strong> is the backbone of modern transportation and logistics operations, helping organizations stay competitive in a fast-paced world.</li>
                </ul>
-            </div>
+            </div> --}}
          </div>
       </div>
    </section>
