@@ -30,7 +30,7 @@ Route::get('/storage', function () {
 });
 
 //UI Pages Routs
-// Route::get('/', [HomeController::class, 'uisheet'])->name('uisheet');
+Route::get('/', [HomeController::class, 'uisheet'])->name('uisheet');
 
 Route::group(['middleware' => 'auth'], function () {
     // Permission Module
@@ -121,6 +121,7 @@ Route::group(['prefix' => 'icons'], function() {
 //Extra Page Routs
 Route::get('privacy-policy', [HomeController::class, 'privacypolicy'])->name('pages.privacy-policy');
 Route::get('terms-of-use', [HomeController::class, 'termsofuse'])->name('pages.term-of-use');
+Route::post('contactus',[HomeController::class, 'contactus'])->name('contactus');
 
 
 // ------------------------------Start the project---------------------------

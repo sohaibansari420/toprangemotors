@@ -3,7 +3,7 @@
       <div class="row m-0 align-items-center bg-white vh-100">            
          <div class="col-md-6 d-md-block d-none bg-primary p-0 mt-n1 vh-100 overflow-hidden">
             <img src="{{asset('images/auth/05.png')}}" class="img-fluid gradient-main animated-scaleX" alt="images">
-            <div class="position-absolute top-50" 
+            {{-- <div class="position-absolute top-50" 
                   style="right: 65%; transform: translateY(-50%); background-color: rgba(255, 255, 255, 0.8); border-radius: 10px; z-index: 0; padding: 20px; width: 50%; max-width: 500px;  background:center;">
                <ul class="m-1 text-dark" style="color: white !important; font-size: large; font-family: 'Arial', sans-serif; list-style-type: disc;">
                      <li><strong>Fleet Management System</strong> is a comprehensive solution designed to streamline and optimize the operations of vehicle fleets across various industries.</li>
@@ -12,11 +12,11 @@
                      <li>Whether for transportation or logistics, this platform ensures improved productivity, reduced operational costs, and enhanced compliance with regulations.</li>
                      <li>Ideal for businesses of all sizes, a <strong>Fleet Management System</strong> is the backbone of modern transportation and logistics operations, helping organizations stay competitive in a fast-paced world.</li>
                </ul>
-            </div>
+            </div> --}}
          </div>
          <div class="col-md-6">           
             <div class="row justify-content-center">
-               <div class="col-md-10">
+               <div class="col-md-10"> 
                   <div class="card card-transparent auth-card shadow-none d-flex justify-content-center mb-0">
                      <div class="card-body">
                         <a href="{{route('dashboard')}}" class="navbar-brand d-flex align-items-center mb-3">

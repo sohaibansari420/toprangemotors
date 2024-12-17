@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Vehicle;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Contact;
 
 class HomeController extends Controller
 {
@@ -232,5 +234,21 @@ class HomeController extends Controller
     public function termsofuse(Request $request)
     {
         return view('terms-of-use');
+    }
+    
+    public function contactus(Request $request)
+    {
+        $data = [
+            'name' => $request->post('name'),
+            'email' => $request->post('email'),
+            'phone' => $request->post('phone'), 
+        ]; 
+        //send email to umer sab
+        $name =   $request->post('name');
+        $email =   $request->post('email');
+        $phone =   $request->post('phone');
+        Mail::to('info@pcocar.com')->send(new Contact($name, $phone, $email));  
+        return redirect('uisheet');
+            
     }
 }
