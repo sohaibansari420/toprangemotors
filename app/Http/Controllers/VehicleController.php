@@ -8,10 +8,7 @@ use App\Models\Vehicle;
 class VehicleController extends Controller
 {
     public function list(){
-        $vehicle = Vehicle::where('is_active','yes')->get();
-        $data = [
-            'vehicles' => $vehicle,
-        ]; 
-        return view('Fleet.Vehicle.list')->with('data');
+        $vehicles = Vehicle::where('is_active','yes')->get();
+        return view('Fleet.Vehicle.list',compact('vehicles'));
     }
 }
