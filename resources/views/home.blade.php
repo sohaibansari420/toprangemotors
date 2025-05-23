@@ -280,16 +280,11 @@
     <section class="contact" id="contact">
         <h2>Contact Us</h2>
         <div class="contact-info mb-4">
-        <p><i class="fas fa-phone"></i> Phone: +1 (555) 123-4567</p>
+        <p><i class="fas fa-phone"></i> Phone: +44 (0) 121 285 1875</p>
         <p><i class="fas fa-envelope"></i> Email: info@toprangemotors.com</p>
-        <p><i class="fas fa-map-marker-alt"></i> Address: 1234 Auto Lane, Motor City, USA</p>
+        <p><i class="fas fa-map-marker-alt"></i>Address: 11B Oxhill Road, Shirley, Solihull, England, B90 1LR</p>
         </div>
-        <iframe
-        src="https://maps.google.com/maps?q=1234%20Auto%20Lane%20Motor%20City&t=&z=15&ie=UTF8&iwloc=&output=embed"
-        allowfullscreen
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <iframe src="https://maps.google.com/maps?q=11B%20Oxhill%20Road,%20Shirley,%20Solihull,%20England,%20B90%201LR&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
     <footer>
